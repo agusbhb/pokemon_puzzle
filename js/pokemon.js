@@ -1,7 +1,14 @@
 class Pokemon {
 
     // (1)
+    static keys = {
+      ArrowUp: false,
+      ArrowDown: false,
+      ArrowLeft: false,
+      ArrowRight: false
+    }
     // (2)
+    static activePokemon = null;
 
     constructor(name, sprite) {
         this.name = name;
@@ -12,14 +19,19 @@ class Pokemon {
     
     createElement() {
       // (3) 
+
     }
     
     addEventListeners() {   
      	// (4)
+      this.element.addEventListener('click', () =>{
+        Pokemon.activePokemon = this;
+      });
     }
     
     move(step) { 
     	// (5)
+     
     }
 } // end of Pokemon class
 
